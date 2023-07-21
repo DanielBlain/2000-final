@@ -1,9 +1,9 @@
 
-$brkpt-tiny: 320px
-$brkpt-mobile: 480px;
-$brkpt-medium: 600px;
-$brkpt-large: 1000px;
-$brkpt-presentation: 1920px;
+// Breakpoint locations for media queries
+$breakpoint-small: 31.25em;
+$breakpoint-medium: 61em;
+$breakpoint-large: 72.5em;
+$breakpoint-extra: 87.5em;
 
 /**
 Use with @media (min-width: etc.) { .. }
