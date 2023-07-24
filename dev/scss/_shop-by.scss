@@ -1,4 +1,4 @@
-@use "vars-colors";
+@use "vars-colors" as *;
 
 .shop-by-slide {
     margin: 0 auto;
@@ -29,11 +29,11 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: $clr-gray-transparent;
     border-radius: 50%;
     p {
         font-size: 2rem;
-        color: white;
+        color:$clr-white;
         text-align: center;
     }
 }
