@@ -1,35 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Put Web Page Title Here...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Put Web Page Title Here...</title>
 
-	<!-- *** IMPORTANT *** PUT LINKS TO GOOGLE FONTS HERE -->
-	<!-- Put Google Fonts Here -->
+    <!-- *** IMPORTANT *** PUT LINKS TO GOOGLE FONTS HERE -->
+    <!-- Put Google Fonts Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
-	<!-- end Google Fonts -->
+    <!-- end Google Fonts -->
 
-	<!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
-	<link rel="stylesheet" href="styles/styles.css?cachebuster=1">
+    <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
+    <link rel="stylesheet" href="styles/styles.css?cachebuster=1">
 </head>
+
 <body>
     <div class="site-wrapper">
         <header></header>
-        <div>
-            <!-- Put your HTML code here... -->
-            
-            <h1>Replace Me with Your HTML Code... Here I made a change!</h1>
+        <section class="shop-by">
 
-            <h2>Hello again</h2>
-        </div>
+            <h2>Shop by Room or Device</h2>
+
+            <div class="shop-by-slide">
+                <div class="shop-by-contents">
+                    <img src="images/shop-slider-01-speaker-white.jpg" alt="A white speaker">
+                    <div class="shop-text">
+                        <p>with sonos</p>
+                    </div>
+                </div>
+
+                <div class="shop-by-contents">
+                    <img src="images/shop-slider-02-speaker-brown.jpg" alt="A photo of a brown speaker and a smartphone.">
+                    <div class="shop-text">
+                        <p>with siri</p>
+                    </div>
+                </div>
+
+                <div class="shop-by-contents">
+                    <img src="images/shop-slider-03-speakers-brown.jpg"
+                        alt="A photo of brown speaker beside a record player.">
+                        <div class="shop-text">
+                            <p>with a turntable</p>
+                        </div>
+                </div>
+
+                <div class="shop-by-contents">
+                    <img src="images/shop-slider-04-speakers-brown.jpg" alt="A photo of brown speaker beside a TV.">
+                    <div class="shop-text">
+                        <p>tv room</p>
+                    </div>
+                </div>
+
+                <div class="shop-by-contents">
+                    <img src="images/shop-slider-05-speakers-brown.jpg"
+                        alt="A photo of 2 small brown speakers with black speaker grill.">
+                        <div class="shop-text">
+                            <p>kitchen</p>
+                        </div>
+                </div>
+
+                <div class="shop-by-contents">
+                    <img src="images/shop-slider-06-speaker-brown.jpg"
+                        alt="A photo of brown speaker with grey speaker grill. beside a laptop">
+                        <div class="shop-text">
+                            <p>patio</p>
+                        </div>
+                </div>
+
+                <div class="shop-by-contents">
+                    <img src="images/shop-slider-07-speakers-white.jpg" alt="A photo of 2 small white speakers.">
+                    <div class="shop-text">
+                        <p>office</p>
+                    </div>
+                </div>
+
+                <div class="shop-by-contents">
+                    <img src="images/shop-slider-08-speakers-white.jpg" alt="A photo of 2 white speakers besise a TV.">
+                    <div class="shop-text">
+                        <p>bedroom</p>
+                    </div>
+            </div>
+            </div>
+
+            <div class="learn-more">
+                <div class="learn-more-box">
+                    <img src="images/bg-all-new-section-phone-square.jpg" alt="A white speaker">
+
+                    <div class="all-new">
+                        <p class="all-new-title">All New</p>
+                        <p>The A5+ Wireless Speakers</p>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+
+                <div class="learn-more-box">
+                    <img src="images/bg-feeling-lucky-section-phone-square.jpg" alt="A wodden speaker">
+                    <div class="all-new">
+                        <p class="all-new-title">Feeling Lucky</p>
+                        <p>The A5+ Wireless Speakers</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+
+                <div class="learn-more-box">
+                    <img src="images/bg-our-story-section-phone-square.jpg" alt="A starry sky">
+                    <div class="all-new our-story">
+                        <p class="all-new-title">Our story</p>
+                        <p>Audioengine was founded with a simple goal.</p>
+                        <p>Build a speaker that sounds great, is easy to setup and use, and that makes people want to
+                            lesten
+                            to music every day.</p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
         <footer></footer>
     </div>
 
-<!-- *** IMPORTANT *** If you do not require the jQuery Library then feel free to delete the next line -->
-<script src="scripts/libs/jquery/jquery-3.6.0.min.js"></script>
-<!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
-<script src="scripts/script.min.js?cachebuster=1"></script>
-<!-- *** IMPORTANT *** DO NOT ADD ADDITIONAL SCRIPT LINKS HERE...If you want to add additional scripts simply save the script files to the "dev/scripts" directory (for your custom scripts) and the 'dev/scripts/libs' directory for any jQuery plugins or other JavaScript libraries and Gulp will concatenate and minify them into the "script.min.js" file above. See the project instructions for details -->	
+    <!-- *** IMPORTANT *** If you do not require the jQuery Library then feel free to delete the next line -->
+    <script src="scripts/libs/jquery/jquery-3.6.0.min.js"></script>
+    <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
+    <script src="scripts/script.min.js?cachebuster=1"></script>
+    <!-- *** IMPORTANT *** DO NOT ADD ADDITIONAL SCRIPT LINKS HERE...If you want to add additional scripts simply save the script files to the "dev/scripts" directory (for your custom scripts) and the 'dev/scripts/libs' directory for any jQuery plugins or other JavaScript libraries and Gulp will concatenate and minify them into the "script.min.js" file above. See the project instructions for details -->
 </body>
+
 </html>

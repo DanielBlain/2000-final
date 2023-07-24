@@ -1,5 +1,7 @@
 // Sass imports
-@use _media-breakpoints as *;
-@use _vars-colors as *;
-
+@use "media-breakpoints";
+@use "vars-colors";
+@use "default";
+@use "shop-by";
+@use "all-new";
 // Your code
