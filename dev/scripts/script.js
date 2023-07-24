@@ -1,9 +1,26 @@
 let isVideoPlaying = false;
 
 $(document).ready(function(){
-    const videoPanel = document.getElementsByClassName("video-panel")[0];
-    const videoElement = document.getElementsByTagName("video")[0];
-    const videoPanelButton = document.getElementsByClassName("play-arrow")[0];
+    const videoPanel = $(".video-panel")[0];
+    const videoElement = $("video")[0];
+    const videoPanelButton = $(".play-arrow")[0];
+
+    $('.news-slick').slick({
+        autoplay: "true",
+        responsive: [
+            {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: 'unslick'
+            }
+        ],
+
+    })
 
     videoPanel.onclick = (event) => {
         if (!isVideoPlaying) {
@@ -16,9 +33,4 @@ $(document).ready(function(){
         }
         isVideoPlaying = !isVideoPlaying;
     };
-
-    /*
-    $('.your-class').slick({
-      setting-name: setting-value
-    })*/
 })
