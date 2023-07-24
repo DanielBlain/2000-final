@@ -1,6 +1,6 @@
 let isVideoPlaying = false;
 
-window.onload = (event) => {
+$(document).ready(function(){
     const videoPanel = document.getElementsByClassName("video-panel")[0];
     const videoElement = document.getElementsByTagName("video")[0];
     const videoPanelButton = document.getElementsByClassName("play-arrow")[0];
@@ -17,4 +17,8 @@ window.onload = (event) => {
         isVideoPlaying = !isVideoPlaying;
     };
 
-}
+    /*
+    $('.your-class').slick({
+      setting-name: setting-value
+    })*/
+})
