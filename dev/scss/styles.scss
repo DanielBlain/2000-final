@@ -1,5 +1,15 @@
 // Sass imports
-@use _media-breakpoints as *;
-@use _vars-colors as *;
+@use "media-breakpoints" as *;
+@use "vars-colors" as *;
+@use "vars-spacing" as *;
+@use "capitalize" as *;
+@use "uppercase" as *;
+@use "accessibility" as *;
 
-// Your code
+@use "news-panel";
+@use "video-panel";
+@use "top-arrow";
+@use "social-panel";
+@use "footer";
+
+

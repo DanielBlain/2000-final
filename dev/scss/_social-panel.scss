@@ -1,0 +1,21 @@
+// Sass imports
+@use "media-breakpoints" as *;
+@use "uppercase" as *;
+@use "vars-colors" as *;
+@use "vars-spacing" as *;
+
+.social-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:  wrap;
+    justify-content: space-between;
+    padding: $space-horiz;
+
+    span {
+        margin: $space-horiz;
+    }
+
+    .email {
+        @include uppercase;
+    }
+}

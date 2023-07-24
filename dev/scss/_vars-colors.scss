@@ -1,8 +1,13 @@
 
-$clr-black: #00000;
-$clr-white: #FFFFFF;
-$clr-orange: orange;
-$clr-orange-transparent: #rgb(128,128,0,0.50);
-$clr-white-transparent: rgba(255, 255, 255, 0.50);
-$clr-black-transparent: rgba(0, 0, 0, 0.50);
-$clr-gray: #808080;
+$clr-black: rgb(0, 0, 0);
+$clr-white: rgb(255, 255, 255);
+$clr-orange: rgb(255, 165, 0);
+$clr-orange-transparent: rgb(255, 165, 0, 0.75);
+$clr-white-transparent: rgba(255, 255, 255, 0.75);
+$clr-black-transparent: rgba(0, 0, 0, 0.75);
+$clr-gray: rgb(219, 219, 219);
+
+/*
+$clr-red100: rgb(255, 17, 0);
+$clr-black: black;
+$radius: 0.2rem;*/

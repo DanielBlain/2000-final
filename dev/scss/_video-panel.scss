@@ -1,0 +1,33 @@
+@use "vars-colors" as *;
+@use "uppercase" as *;
+
+.video-panel {
+    position: relative; /* No effect but to allow positioning of children */
+
+    & video {
+        width: 100%;
+    }
+    
+    & p {
+        @include uppercase;
+        position: absolute;
+        top: 1rem;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        text-shadow: .05rem .05rem $clr-white;
+    }
+
+    & .play-arrow {
+        width: 10%;
+        height: 20%;
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        position: absolute;
+        margin: 0 auto;
+        bottom: 40%;
+        left: 0;
+        right: 0;
+        background-color: $clr-orange;
+    }
+}

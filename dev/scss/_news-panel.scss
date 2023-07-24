@@ -1,0 +1,13 @@
+// Sass imports
+@use "media-breakpoints" as *;
+@use "vars-colors" as *;
+@use "vars-spacing" as *;
+@use "uppercase" as *;
+
+.news-panel {
+    text-align: center;
+    
+    & span {
+        @include uppercase;
+    }
+}

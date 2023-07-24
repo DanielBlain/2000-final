@@ -1,0 +1,44 @@
+// Sass imports
+@use "media-breakpoints" as *;
+@use "vars-colors" as *;
+@use "vars-spacing" as *;
+@use "capitalize" as *;
+
+body {
+    margin: 0;
+}
+
+footer {
+    padding: calc(2*$space-horiz) $space-horiz;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: $clr-gray;
+    border-top: solid 1px $clr-black;
+    
+    .panel {
+        margin: 0;
+        flex: 1 1 auto;
+        width: 80%;
+
+        a {
+            @include capitalize;
+            display: block;
+            margin: $space-horiz;
+            text-decoration: none;
+            color: $clr-black;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tiny) {
+    footer .panel {
+        width: 40%;
+    }
+}
+
+@media (min-width: $breakpoint-small) {
+    footer .panel {
+        width: 22.5%;
+    }
+}
