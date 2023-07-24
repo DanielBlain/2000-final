@@ -1,4 +1,5 @@
 // Sass imports
+<<<<<<< HEAD
 @use "../slick/slick.scss" as *;
 @use "../slick/slick-theme.scss" as *;
 
@@ -16,3 +17,11 @@
 @use "footer";
 
 
+=======
+@use "media-breakpoints";
+@use "vars-colors";
+@use "default";
+@use "shop-by";
+@use "all-new";
+// Your code
+>>>>>>> kaori
