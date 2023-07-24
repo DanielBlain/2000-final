@@ -1,12 +1,13 @@
 // Sass imports
+@use "../slick/slick.scss" as *;
+@use "../slick/slick-theme.scss" as *;
+
 @use "media-breakpoints" as *;
 @use "vars-colors" as *;
 @use "vars-spacing" as *;
 @use "capitalize" as *;
 @use "uppercase" as *;
 @use "accessibility" as *;
-@use "../slick/slick.scss" as *;
-@use "../slick/slick-theme.scss" as *;
 
 @use "news-panel";
 @use "video-panel";

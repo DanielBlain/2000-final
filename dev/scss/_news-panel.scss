@@ -5,9 +5,19 @@
 @use "uppercase" as *;
 
 .news-panel {
+    padding: $space-horiz;
     text-align: center;
     
     & span {
         @include uppercase;
+        font-family: 'Source Sans 3', sans-serif;
+    }
+}
+
+.news-slick {
+    margin: 0 auto;
+    
+    img {
+        width: 125px;
     }
 }

@@ -6,12 +6,34 @@ $(document).ready(function(){
     const videoPanelButton = $(".play-arrow")[0];
 
     $('.news-slick').slick({
-        autoplay: "true",
+        respondTo: 'window',
         responsive: [
+            {
+                breakpoint: 950,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 4,
+                }
+            },
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                }
+            },
             {
                 breakpoint: 650,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 }
             },
             {
@@ -19,7 +41,6 @@ $(document).ready(function(){
                 settings: 'unslick'
             }
         ],
-
     })
 
     videoPanel.onclick = (event) => {
