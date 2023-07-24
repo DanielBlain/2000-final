@@ -4,17 +4,34 @@
 @use "mixins" as *;
 
 
+
 body {
-    display: flex;
-    justify-content: center;
-    background-color: $clr-dark-gray;
-    margin: 0;
+	line-height: 1;
+	margin: 0;
+    background-color: $clr-dark-gray;	
 }
 
-/* hamburger menu ..................*/
 
+.first-header {
+	display:flex;
+	flex-wrap: wrap;
+    background-color: $clr-black;
+    z-index: 3;
+    width: 100%;
+    position: sticky;
+    justify-content: left;
+}
+
+#logo-Audio{
+    display: block;
+    margin: 1.5rem;
+} 
+
+
+/* header ..................*/
+ 
 .navbar-nav-ml-auto {
-    list-style-type: none;  
+  list-style-type: none;  
 }
 
 .site-navigation {
@@ -23,15 +40,13 @@ body {
 
 .site-navigation ul {
     list-style: none;
-    padding: 1rem;
+    background-color: $clr-black;
     margin: 0;
-    text-align: center;
+    padding: 1rem 0;
     display: none;
-    position: relative;
     left: 0;
     right: 0;
-    z-index: 1;
-    top: 4rem;
+    z-index: 2;
 }
 
 .site-navigation.toggled ul {
@@ -39,34 +54,34 @@ body {
 }
 
 .site-navigation a {
-    display: block;
+    display: flex;
+    font-size: 1rem;
     text-decoration: none;
     color: $clr-white;
-    padding: .5rem;
+    background-color: $clr-black;
+   
 }
 
 .menu-toggle {
     display: block;
-    background-color: $clr-black;
+    background-color: transparent;
     border: 0;
-    padding-left: 100%;
-    position: fixed;
-    top: 0;
-    right: -.5rem;
-    z-index: 1;
-}
-
-.nav-menu{
-    background-color: $clr-black;
-}
-
-
-#logo-Audio{
-    position: fixed;
     z-index: 2;
-    top: 1.5rem;
-    padding-left: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
+
+.nav-link{
+	padding: 1rem;
+}
+
+.wrapper-part1{
+    width: 100%;
+}
+
+
+/* hamburger menu ..................*/
 
 .ham {
 	cursor: pointer;
@@ -105,47 +120,60 @@ body {
   }
 
 
-@media (min-width: 760px) {
 
-  .menu-toggle {
-		display: none;
-	}
+  @media (min-width: $breakpoint-medium) {
 
-	.site-navigation ul,
-	.site-navigation.toggled ul {
-		display: flex;
-		justify-content: right;
-		position: fixed;
-	}
-
-	.site-navigation a {
-		padding: 1rem 1rem;
-	}
-
-  .nav-menu {
-      display: flex;
-      flex-direction: row;
-  } 
+    .menu-toggle {
+          display: none;
+      }
   
-  .site-navigation ul{
-	top: 0;
+      .first-header {
+        display: flex;
+        justify-content: space-between;
+        background-color: $clr-black;
+        padding-top: 3rem;
+      }
+  
+      .site-navigation ul,
+      .site-navigation.toggled ul {
+          display: flex;
+          justify-content: right;
+          position: fixed;
+          top: 0;
+          padding: 1rem 0;
+      }
+  
+      .site-navigation a {
+          padding: 1rem 1rem;
+      }
+  
+    .nav-menu {
+        display: flex;
+        flex-direction: row-reverse;
+    } 
+
+    #logo-Audio{
+        padding: 1rem;
+        margin-top: .5rem;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+    } 
+
   }
-  .header-menu{
-    width: 100%;
+
+
+/* main section 1 ..................*/
+
+
+  .first-transBox {
+    display: none;
   }
+
 
   #first-banner {
     position: relative;
     width: 100%;
-    top: 3rem;
-}
-
-}
-
-#first-banner {
-    position: relative;
-    width: 100%;
-    top: 4rem;
 }
 
 .first-ban-sec{
@@ -158,52 +186,34 @@ body {
     justify-content: center;
 }
 
-.first-transBox {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-content: right;
-    background-color: $clr-white-transparent;
-    color: $clr-dark-gray;
-    width: 40%;
-    height: 40%;
-    top: 7rem;
-    padding: 2rem;
-
-
-    & button {
-        width:15rem;
-        font-size: 1rem;
-        @include important-text;
-    }
-
-    h1 {
-        font-size: 4rem;
-        margin-bottom: .5rem;
-    }
-
-    p {
-        font-size: 3.5rem;
-        margin-top: 0;
-    }
-    
-}
-
-.best-seller{
+.main-banner-wrapper{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-content:space-between;
-    background-color: $clr-white;
-    padding: 3rem;
-    text-align: center;
-    margin-top: 3rem;
+    justify-content: center;
+    position: relative;
+}
 
-    & .best-seller-img {
+.best-seller {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: left;
+    background-color: $clr-white;
+    padding: 1rem;
+    text-align: center;
+    
+
+    & .best-seller-img{
+       
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    & .best-seller-img img{
+        width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     & button {
@@ -212,8 +222,99 @@ body {
         @include important-text;
     }
 
-    &h1 {
+    // &h1 {
+    //     text-align: left;
+    // }
+
+}
+
+.img-sec{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 .5rem;
+    text-align: left;
+}
+
+
+@media (min-width: $breakpoint-small) {
+
+
+    .first-transBox {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: right;
+        background-color: $clr-white-transparent;
+        color: $clr-dark-gray;
+        max-width: 32%;
+        top: 2rem;
+        padding: 2rem;
+        margin: 0 3rem 0 0;
+    
+    
+        & button {
+            width:15rem;
+            font-size: 1rem;
+            @include important-text;
+        }
+    
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: .5rem;
+        }
+    
+        p {
+            font-size: 3rem;
+            margin-top: 0;
+        }
+        
+    }
+
+    .img-sec{
+        margin: 0 2rem;
+    }
+
+}
+
+@media (min-width: 450px) {
+    .best-seller .best-seller-img{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3rem 3rem;
+    }
+
+    .best-seller {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $clr-white;
+        padding: 1rem;
         text-align: center;
+        
+    
+        & .best-seller-img{
+           
+            display: flex;
+            flex-direction: row;
+        }
+    
+        & .best-seller-img img{
+            width: 100%;
+        }
+    
+        & button {
+            width:7rem;
+            font-size: 1rem;
+            @include important-text;
+        }
+    
+        &h1 {
+            text-align: center;
+        }
+    
+       
     }
 
 }
