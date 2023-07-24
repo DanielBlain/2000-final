@@ -1,0 +1,9 @@
+@use "vars-colors" as *;
+
+@mixin important-text {
+    background-color: $clr-orange;
+    color: $clr-white;
+    border: none;
+    border-radius: .3rem;
+    padding: .5rem;
+}

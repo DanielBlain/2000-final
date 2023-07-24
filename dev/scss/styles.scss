@@ -1,5 +1,219 @@
 // Sass imports
-@use _media-breakpoints as *;
-@use _vars-colors as *;
+@use "media-breakpoints" as *;
+@use "vars-colors" as *;
+@use "mixins" as *;
 
-// Your code
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: $clr-dark-gray;
+    margin: 0;
+}
+
+/* hamburger menu ..................*/
+
+.navbar-nav-ml-auto {
+    list-style-type: none;  
+}
+
+.site-navigation {
+    position:relative;
+}
+
+.site-navigation ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    display: none;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    top: 4rem;
+}
+
+.site-navigation.toggled ul {
+    display: block;
+}
+
+.site-navigation a {
+    display: block;
+    text-decoration: none;
+    color: $clr-white;
+    padding: .5rem;
+}
+
+.menu-toggle {
+    display: block;
+    background-color: $clr-black;
+    border: 0;
+    padding-left: 100%;
+    position: fixed;
+    top: 0;
+    right: -.5rem;
+    z-index: 1;
+}
+
+.nav-menu{
+    background-color: $clr-black;
+}
+
+
+#logo-Audio{
+    position: fixed;
+    z-index: 2;
+    top: 1.5rem;
+    padding-left: 1rem;
+}
+
+.ham {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  .hamRotate.active {
+	transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+	transform: rotate(180deg);
+  }
+  .line {
+	fill:none;
+	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+	stroke: $clr-white;
+	stroke-width:5.5;
+	stroke-linecap:round;
+  }
+ 
+  .ham4 .top {
+	stroke-dasharray: 40 121;
+  }
+  .ham4 .bottom {
+	stroke-dasharray: 40 121;
+  }
+  .ham4.active .top {
+	stroke-dashoffset: -68px;
+  }
+  .ham4.active .bottom {
+	stroke-dashoffset: -68px;
+  }
+
+
+@media (min-width: 760px) {
+
+  .menu-toggle {
+		display: none;
+	}
+
+	.site-navigation ul,
+	.site-navigation.toggled ul {
+		display: flex;
+		justify-content: right;
+		position: fixed;
+	}
+
+	.site-navigation a {
+		padding: 1rem 1rem;
+	}
+
+  .nav-menu {
+      display: flex;
+      flex-direction: row;
+  } 
+  
+  .site-navigation ul{
+	top: 0;
+  }
+  .header-menu{
+    width: 100%;
+  }
+
+  #first-banner {
+    position: relative;
+    width: 100%;
+    top: 3rem;
+}
+
+}
+
+#first-banner {
+    position: relative;
+    width: 100%;
+    top: 4rem;
+}
+
+.first-ban-sec{
+    display: flex;
+    justify-content: right;
+}
+
+.banners-sec{
+    display: flex;
+    justify-content: center;
+}
+
+.first-transBox {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: right;
+    background-color: $clr-white-transparent;
+    color: $clr-dark-gray;
+    width: 40%;
+    height: 40%;
+    top: 7rem;
+    padding: 2rem;
+
+
+    & button {
+        width:15rem;
+        font-size: 1rem;
+        @include important-text;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: .5rem;
+    }
+
+    p {
+        font-size: 3.5rem;
+        margin-top: 0;
+    }
+    
+}
+
+.best-seller{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:space-between;
+    background-color: $clr-white;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+
+    & .best-seller-img {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    & button {
+        width:7rem;
+        font-size: 1rem;
+        @include important-text;
+    }
+
+    &h1 {
+        text-align: center;
+    }
+
+}
