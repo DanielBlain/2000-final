@@ -6,6 +6,10 @@
 @use "uppercase" as *;
 @use "accessibility" as *;
 
+// Font Awesome
+@use "fa/fontawesome" as *;
+@use "fa/solid" as *;
+
 // Kaori
 @use "default";
 @use "shop-by";
@@ -19,8 +23,7 @@
 @use "footer";
 @use "mixins" as *;
 
-
-
+// Zeinab
 body {
 	line-height: 1;
 	margin: 0;
