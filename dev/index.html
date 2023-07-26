@@ -9,13 +9,20 @@
     <!-- *** IMPORTANT *** PUT LINKS TO GOOGLE FONTS HERE -->
     <!-- Put Google Fonts Here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- end Google Fonts -->
 
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
     <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
     <link rel="stylesheet" href="styles/styles.css?cachebuster=1">
+
 </head>
 
 <body>
@@ -27,14 +34,15 @@
 
             <div class="shop-by-slide">
                 <div class="shop-by-contents">
-                    <img src="images/shop-slider-01-speaker-white.jpg" alt="A white speaker">
+                    <img src="images/shop-slider-01-speaker-white.jpg" alt="A photo of white speaker.">
                     <div class="shop-text">
                         <p>with sonos</p>
                     </div>
                 </div>
 
                 <div class="shop-by-contents">
-                    <img src="images/shop-slider-02-speaker-brown.jpg" alt="A photo of a brown speaker and a smartphone.">
+                    <img src="images/shop-slider-02-speaker-brown.jpg"
+                        alt="A photo of a brown speaker and a smartphone.">
                     <div class="shop-text">
                         <p>with siri</p>
                     </div>
@@ -43,9 +51,9 @@
                 <div class="shop-by-contents">
                     <img src="images/shop-slider-03-speakers-brown.jpg"
                         alt="A photo of brown speaker beside a record player.">
-                        <div class="shop-text">
-                            <p>with a turntable</p>
-                        </div>
+                    <div class="shop-text">
+                        <p>with a turntable</p>
+                    </div>
                 </div>
 
                 <div class="shop-by-contents">
@@ -58,17 +66,17 @@
                 <div class="shop-by-contents">
                     <img src="images/shop-slider-05-speakers-brown.jpg"
                         alt="A photo of 2 small brown speakers with black speaker grill.">
-                        <div class="shop-text">
-                            <p>kitchen</p>
-                        </div>
+                    <div class="shop-text">
+                        <p>kitchen</p>
+                    </div>
                 </div>
 
                 <div class="shop-by-contents">
                     <img src="images/shop-slider-06-speaker-brown.jpg"
                         alt="A photo of brown speaker with grey speaker grill. beside a laptop">
-                        <div class="shop-text">
-                            <p>patio</p>
-                        </div>
+                    <div class="shop-text">
+                        <p>patio</p>
+                    </div>
                 </div>
 
                 <div class="shop-by-contents">
@@ -83,12 +91,16 @@
                     <div class="shop-text">
                         <p>bedroom</p>
                     </div>
-            </div>
+                </div>
             </div>
 
             <div class="learn-more">
                 <div class="learn-more-box">
-                    <img src="images/bg-all-new-section-phone-square.jpg" alt="A white speaker">
+
+                    <img alt="A white speaker" src="images/bg-all-new-section.jpg"
+                    srcset="    images/bg-all-new-section.jpg 715w,
+                                images/bg-all-new-section-phone-square.jpg 515w" 
+                    sizes="(max-width: 960px) calc(100vw - 60px), 900px">
 
                     <div class="all-new">
                         <p class="all-new-title">All New</p>
@@ -98,22 +110,31 @@
                 </div>
 
                 <div class="learn-more-box">
-                    <img src="images/bg-feeling-lucky-section-phone-square.jpg" alt="A wodden speaker">
+                    <img alt="A wodden speaker" src="images/bg-feeling-lucky-section-phone-square.jpg"
+                    srcset="    images/bg-feeling-lucky-section.jpg 715w,
+                                images/bg-feeling-lucky-section-phone-square.jpg 515w" 
+                    sizes="(max-width: 960px) calc(100vw - 60px), 900px">
+
                     <div class="all-new">
-                        <p class="all-new-title">Feeling Lucky</p>
-                        <p>The A5+ Wireless Speakers</p>
-                        <button>Learn more</button>
+                        <div class="all-new-text">
+                            <p class="all-new-title">Feeling Lucky</p>
+                            <p>The A5+ Wireless Speakers</p>
+                            <button>Learn more</button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="learn-more-box">
-                    <img src="images/bg-our-story-section-phone-square.jpg" alt="A starry sky">
-                    <div class="all-new our-story">
+                <div class="our-story-box">
+                    <img alt="A starry sky" src="images/bg-our-story-section.jpg"
+                            srcset="    images/bg-our-story-section.jpg 1800w,
+                                        images/bg-our-story-section-tablet.jpg 715w,
+                                        images/bg-our-story-section-phone-square.jpg 515w" 
+                            sizes="(max-width: 960px) calc(100vw - 60px), 900px">
+
+                    <div class="our-story">
                         <p class="all-new-title">Our story</p>
-                        <p>Audioengine was founded with a simple goal.</p>
-                        <p>Build a speaker that sounds great, is easy to setup and use, and that makes people want to
-                            lesten
-                            to music every day.</p>
+                        <p class="our-story-text">Audioengine was founded with a simple goal. <br>
+                            Build a speaker that sounds great, is easy to setup and use, and that makes people want to listen to music every day.</p>
                         <button>Learn more</button>
                     </div>
                 </div>
@@ -124,8 +145,14 @@
         <footer></footer>
     </div>
 
+
+    <!-- for slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    
     <!-- *** IMPORTANT *** If you do not require the jQuery Library then feel free to delete the next line -->
-    <script src="scripts/libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="scripts/libs/jquery/jquery-3.7.0.min.js"></script>
     <!-- *** IMPORTANT *** DO NOT DELETE OR EDIT THE NEXT LINE OF CODE - IT IS IMPORTANT FOR THE GULP BUILD PROCESS. SEE YOUR INSTRUCTOR FIRST IF YOU WANT TO EDIT OR DELETE THIS LINE -->
     <script src="scripts/script.min.js?cachebuster=1"></script>
     <!-- *** IMPORTANT *** DO NOT ADD ADDITIONAL SCRIPT LINKS HERE...If you want to add additional scripts simply save the script files to the "dev/scripts" directory (for your custom scripts) and the 'dev/scripts/libs' directory for any jQuery plugins or other JavaScript libraries and Gulp will concatenate and minify them into the "script.min.js" file above. See the project instructions for details -->
