@@ -35,47 +35,49 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: $clr-gray-transparent;
+    background-color: $clr-black-transparent;
     margin: 0;
 }
 
-.all-new-title {
+.all-new-text {
+p {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 500;
-    &:last-of-type {
-        margin-top: 1rem;
+        &:last-of-type {
+            font-size:1.25rem;
+            margin-top: 1rem;
+        }
     }
 }
 
 .our-story-box {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-area: "main2";
-    img {
-        grid-area: main2;
-    }
+    position: relative;
 }
 
 .our-story {
-    text-align: center;
+    width: 100%;
+    height: auto;
     background-color: transparent;
-    grid-area: main2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     z-index: 999;
-    place-content: center;
-    place-items: center;
-    display: inherit;
     p {
+        font-size: 2.25rem;
         color: $clr-white;
         margin: 1rem 0 0 0;
         display: flex;
         justify-content: center;
-        &:last-child {
-            padding: 3rem;
+        &:last-of-type {
+            font-size: 1rem;
+            padding: 0 2rem 1rem 2rem;
         }
     }
+    
     button {
         color: $clr-white;
         background-color: $clr-orange;
@@ -83,11 +85,7 @@
     }
 }
 
-.our-story-text {
-    padding: 0 2rem 1rem 2rem;
-}
-
-@media (min-width: 515px) {
+@media (min-width: 500px) {
     .all-new {
         width: 50%;
         height: auto;
@@ -97,9 +95,16 @@
         padding: 1rem;
     }
 
+    .all-new-text {
+        p {
+        font-size: 1.5rem;
+        &:last-of-type {
+            font-size: 1.25rem;
+        }
+        }
+    }
     .our-story {
-        width: 100%;
-        height: 100%;
+        width: 80%;
         margin: 0;
         padding: 0;
     }
@@ -112,10 +117,61 @@
 }
 
 @media (min-width: 750px) {
+    .all-new {
+        width: 40%;
+        height: 25vh;
+        margin-top: 4rem;
+    }
+    p {
+        font-size: 2.5rem;
+        &:last-of-type {
+        font-size: 1.5rem;
+        }
+        button {
+        font-size: 1.25rem;
+        }
+    }
     .our-story {
         width: 60%;
-        height: 100%;
         margin: 0 auto;
         padding: 0;
+        p {
+        font-size: 2.5rem;
+        &:last-of-type {
+        font-size: 1.25rem;
+        }
+    }
+    }
+}
+
+@media (min-width: 960px) {
+    .all-new {
+        width: 35%;
+        margin-top: 5rem;;
+    }
+.all-new-text{
+    p {
+        font-size: 3rem;
+            &:last-of-type {
+            font-size: 1.5rem;
+            }
+    }
+    button {
+        font-size: 1.25rem;
+        }
+}
+}
+
+.our-story {
+    p {
+    font-size: 3rem;
+    &:last-of-type {
+    font-size: 1.5rem;
+    }
+}
+}
+@media (min-width: 1200px) {
+    .all-new {
+        margin-top: 9rem;;
     }
 }
