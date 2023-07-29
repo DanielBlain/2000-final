@@ -6,7 +6,6 @@ $(document).ready(function(){
         slidesToShow: 5,
         slidesToScroll: 5,
         arrows: true,
-        // dots: true,
 
         responsive: [
             {
@@ -14,7 +13,7 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 4,
                 slidesToScroll: 4
-
+                
               }
             },
             {
@@ -22,7 +21,7 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3
-               
+                
               }
             },
             {
@@ -33,6 +32,6 @@ $(document).ready(function(){
             // settings: "unslick"
             // instead of a settings object
          ]
-        });        
+        });
 });
       

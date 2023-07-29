@@ -39,11 +39,12 @@
     margin: 0;
 }
 
-.all-new-text {
+.all-new-text{
 p {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 500;
+    margin-top: 1rem;
         &:last-of-type {
             font-size:1.25rem;
             margin-top: 1rem;
@@ -67,7 +68,7 @@ p {
     text-align: center;
     z-index: 999;
     p {
-        font-size: 2.25rem;
+        font-size: 2rem;
         color: $clr-white;
         margin: 1rem 0 0 0;
         display: flex;
@@ -97,7 +98,7 @@ p {
 
     .all-new-text {
         p {
-        font-size: 1.5rem;
+        font-size: 2rem;
         &:last-of-type {
             font-size: 1.25rem;
         }
@@ -122,13 +123,15 @@ p {
         height: 25vh;
         margin-top: 4rem;
     }
-    p {
-        font-size: 2.5rem;
-        &:last-of-type {
-        font-size: 1.5rem;
-        }
-        button {
-        font-size: 1.25rem;
+    .all-new-text {
+        p {
+            font-size: 2.25rem;
+            &:last-of-type {
+            font-size: 1.5rem;
+            }
+            button {
+            font-size: 1.25rem;
+            }
         }
     }
     .our-story {
@@ -149,29 +152,37 @@ p {
         width: 35%;
         margin-top: 5rem;;
     }
-.all-new-text{
+    .all-new-text{
     p {
         font-size: 3rem;
-            &:last-of-type {
-            font-size: 1.5rem;
-            }
+        &:last-of-type {
+        font-size: 1.5rem;
+        }
     }
     button {
         font-size: 1.25rem;
         }
-}
-}
-
+    }
 .our-story {
     p {
     font-size: 3rem;
     &:last-of-type {
     font-size: 1.5rem;
     }
+    }
 }
 }
+
 @media (min-width: 1200px) {
     .all-new {
-        margin-top: 9rem;;
+        margin-top: 9rem;
+    }
+}
+@media (min-width: 1415px) {
+    .shop-by {
+        width: 90%;
+    }
+    .site-wrapper {
+        background-color: $clr-black;
     }
 }
