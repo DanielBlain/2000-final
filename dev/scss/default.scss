@@ -1,4 +1,10 @@
+
+@use "vars-colors" as *;
+
+
 body {
+
     margin: 0;
     font-family: 'Source Sans 3', sans-serif;
+    background-color: $clr-dark-gray;
 }

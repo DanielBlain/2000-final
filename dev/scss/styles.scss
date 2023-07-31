@@ -20,20 +20,10 @@
 @use "mixins" as *;
 
 
-
-body {
-	line-height: 1;
-	margin: 0;
-    background-color: $clr-dark-gray;	
-}
-
-
 .first-header {
 	display:flex;
 	flex-wrap: wrap;
-    background-color: $clr-black;
     z-index: 3;
-    width: 100%;
     position: sticky;
     justify-content: left;
 }
@@ -41,22 +31,26 @@ body {
 #logo-Audio{
     display: block;
     margin: 1.5rem;
+    width: 12rem;
 } 
 
 
 /* header ..................*/
  
 .navbar-nav-ml-auto {
-  list-style-type: none;  
+  list-style-type: none; 
+ 
 }
 
 .site-navigation {
     position:relative;
-}
+    width: 100%;
+    background-color: $clr-black;
+  }
+  
 
 .site-navigation ul {
     list-style: none;
-    background-color: $clr-black;
     margin: 0;
     padding: 1rem 0;
     display: none;
@@ -73,8 +67,7 @@ body {
     display: flex;
     font-size: 1rem;
     text-decoration: none;
-    color: $clr-white;
-    background-color: $clr-black;
+    color: $clr-white; 
    
 }
 
@@ -86,16 +79,39 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    
 }
 
 .nav-link{
 	padding: 1rem;
 }
 
-.wrapper-part1{
-    width: 100%;
+
+.bi{
+    padding: 1rem .25rem;  
+
+    &.bi-cart-fill{
+        margin-right: 1rem;
+    }
+
+    &.bi-geo-alt-fill{
+        margin-left: .5rem;
+    }
 }
 
+.nav-button{
+    background-color: transparent;
+    border: none;
+    fill: $clr-white;
+}
+
+.nav-button:hover {
+    fill: $clr-orange;
+}
+
+.nav-link:hover {
+    background-color: $clr-dark-gray;
+}
 
 /* hamburger menu ..................*/
 
@@ -139,42 +155,26 @@ body {
 
   @media (min-width: $breakpoint-medium) {
 
+    
     .menu-toggle {
           display: none;
       }
   
       .first-header {
-        display: flex;
-        justify-content: space-between;
-        background-color: $clr-black;
-        padding-top: 3rem;
+          background-color: $clr-black;
+          position: relative;
+          padding: .5rem 0;
+          max-width: 95rem;
+          justify-self: center;
       }
-  
+
       .site-navigation ul,
       .site-navigation.toggled ul {
           display: flex;
           justify-content: right;
-          position: fixed;
+          position: absolute;
           top: 0;
-          padding: 1rem 0;
       }
-  
-      .site-navigation a {
-          padding: 1rem 1rem;
-      }
-  
-    .nav-menu {
-        display: flex;
-        flex-direction: row-reverse;
-    } 
-
-    #logo-Audio{
-        padding: 1rem;
-        margin-top: .5rem;
-        position: fixed;
-        z-index: 3;
-        top: 0;
-    } 
 
   }
 
@@ -182,52 +182,80 @@ body {
 /* main section 1 ..................*/
 
 
-  .first-transBox {
+
+
+.first-transBox {
     display: none;
-  }
+    flex-direction: column;
+    position: absolute;
+    justify-content: right;
+    background-color: $clr-white-transparent;
+    color: $clr-dark-gray;
+    top: 2rem;
+    right: 0;
+    padding: 0 1rem 1rem 1.5rem;
+    
 
 
-  #first-banner {
+    & button {
+        width:15rem;
+        font-size: 1rem;
+        margin: 1rem .5rem;
+        @include important-text;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+    
+}
+
+
+#first-banner {
     position: relative;
     width: 100%;
 }
 
-.first-ban-sec{
-    display: flex;
-    justify-content: right;
-}
-
-.banners-sec{
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: $clr-white;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.main-banner-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #e10f0f !important;
+    fill: rgb(233, 10, 10) !important;
+    stroke: black !important;
 }
 
 .best-seller {
     display: flex;
     position: relative;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
     background-color: $clr-white;
-    padding: 1rem;
-    text-align: center;
+    padding: 2rem;
+    text-align: left;
     
 
-    & .best-seller-img{
-       
-        display: flex;
-        flex-direction: column;
-        
-    }
-
     & .best-seller-img img{
-        width: 100%;
+        width: 60%;
         display: flex;
         flex-direction: row;
     }
@@ -238,65 +266,96 @@ body {
         @include important-text;
     }
 
-    // &h1 {
-    //     text-align: left;
-    // }
-
+    & h1 {
+        font-size: 2.5rem;
+    }
 }
 
 .img-sec{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 .5rem;
+    grid-template-rows: 1rem 1fr;
+    grid-template-columns: 1fr 0 ;
     text-align: left;
+    gap: 2rem;
+ 
+
+    & p {
+        grid-row: 1/2;
+        font-size: 1.2rem;
+
+    }
+    & img {
+        grid-row: 2/2;
+        margin-bottom: 1rem;
+    }
+
+    & button {
+        grid-row: 2/2;
+        height: 2.5rem;
+        justify-self:right ;
+        align-self:first baseline;
+        margin-top: 3rem;
+    }
+}
+
+@media (min-width: 650px) {
+    .first-transBox {
+        display: flex;
+        width: 25rem;
+    
+        h1 {
+            font-size: 2.5rem;
+        }
+    
+        p {
+            font-size: 2rem;
+        }
+        
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .first-transBox {
+        display: flex;
+        width: 30rem;
+    
+        h1 {
+            font-size: 3rem;
+        }
+    
+        p {
+            font-size: 2rem;
+        }
+        
+    }
 }
 
 
-@media (min-width: $breakpoint-small) {
+@media (min-width: $breakpoint-large) {
 
 
     .first-transBox {
         display: flex;
-        flex-direction: column;
-        position: absolute;
-        justify-content: right;
-        background-color: $clr-white-transparent;
-        color: $clr-dark-gray;
-        max-width: 32%;
-        top: 2rem;
-        padding: 2rem;
-        margin: 0 3rem 0 0;
-    
-    
-        & button {
-            width:15rem;
-            font-size: 1rem;
-            @include important-text;
-        }
-    
+        width: 40rem;
+        margin: 1rem;
+
         h1 {
             font-size: 3.5rem;
-            margin-bottom: .5rem;
+            margin-top: 3rem;
         }
     
         p {
-            font-size: 3rem;
-            margin-top: 0;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
         }
-        
     }
+}   
 
-    .img-sec{
-        margin: 0 2rem;
-    }
-
-}
-
-@media (min-width: 450px) {
+@media (min-width: $breakpoint-small) {
     .best-seller .best-seller-img{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         margin: 3rem 3rem;
     }
 
@@ -328,9 +387,60 @@ body {
     
         &h1 {
             text-align: center;
+        }  
+
+        & p {
+            font-size: 1rem;
         }
-    
-       
     }
 
+    .img-sec{
+        margin: 0 2rem;
+        display: block;
+       text-align: center;
+    }
+
+    
 }
+
+
+@media (min-width: $breakpoint-large) {
+    .img-sec{
+        margin: 0 2rem;
+        display: block;
+       text-align: center;
+    }
+
+    .best-seller p {
+        font-size: 1.5rem;
+    }
+
+    .first-header{
+        width: 100%;
+    }
+
+    .best-seller{
+        max-width: 95rem;
+    }
+
+    .first-header-wrapper,
+    .first-main-wrapper{
+        @include default-style;
+    }
+
+
+    .mySwiper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 95rem;
+        background-color: $clr-white;
+    }
+
+    #first-banner{
+        max-width: 95rem;
+    }
+
+    
+}
+
