@@ -1,4 +1,15 @@
-@use "vars-colors";
+@use "vars-colors" as *;
+
+.shop-by {
+    background-color: white;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 1rem;
+    font-size: 2.75rem;
+    font-weight: 200;
+    }
 
 .shop-by-slide {
     margin: 0 auto;
@@ -6,11 +17,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    h2 {
-    margin: 2rem;
-    font-size: 2rem;
-    font-weight: 400;
-    }
 }
 
 .shop-by-contents {
@@ -20,20 +26,44 @@
     img {
     border-radius: 50%;
     width: 100%;
+    filter: brightness(0.5);
     }
+    p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    }    
 }
 
 .shop-text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(128, 128, 128, 0.5);
-    border-radius: 50%;
+    z-index: 999;
+    font-size: 1.5rem;
+    color:$clr-white;
+}
+
+@media (min-width: 450px) {
+.shop-by-slide {
+    position: relative;
+    display: inline;
+    .slick-slider {
+        position: relative;
+        display: block;
+        width: 80%;
+        margin: 2rem auto;
+    }
+    .slick-next:before, .slick-prev:before {
+        color: $clr-orange !important;
+        font-size: 2rem !important;
+    }
+}
+
+.shop-by-contents {
     p {
         font-size: 2rem;
-        color: white;
-        text-align: center;
     }
+}
 }
