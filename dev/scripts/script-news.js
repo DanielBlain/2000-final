@@ -1,10 +1,4 @@
-let isVideoPlaying = false;
-
-$(document).ready(function(){
-    const videoPanel = $(".video-panel")[0];
-    const videoElement = $("video")[0];
-    const videoPanelButton = $(".play-arrow")[0];
-
+$(document).ready(function() {
     $('.news-slick').slick({
         respondTo: 'window',
         responsive: [
@@ -42,16 +36,4 @@ $(document).ready(function(){
             }
         ],
     })
-
-    videoPanel.onclick = (event) => {
-        if (!isVideoPlaying) {
-            videoElement.play();
-            videoPanelButton.style.display="none";
-        }
-        else {
-            videoElement.pause();
-            videoPanelButton.style.display="block";
-        }
-        isVideoPlaying = !isVideoPlaying;
-    };
 })

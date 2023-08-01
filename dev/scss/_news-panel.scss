@@ -5,20 +5,41 @@
 @use "uppercase" as *;
 
 .news-panel {
-    padding: $space-horiz;
     text-align: center;
     background-color: $clr-white;
+    padding-top: 4rem;
     
-    & span {
+    & div {
         @include uppercase;
         font-family: 'Source Sans 3', sans-serif;
+        font-size: 2.4rem;
     }
 }
 
 .news-slick {
-    margin: 0 auto;
-    
-    img {
-        width: 125px;
+    a {
+        display: block;
+        padding: 2.2rem 0;
+
+        img {
+            width: 260px;
+        }    
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .news-slick {
+        position: relative;
+        display: inline;
+        .slick-slider {
+            position: relative;
+            display: block;
+            width: 80%;
+            margin: 2rem auto;
+        }
+        .slick-next:before, .slick-prev:before {
+            color: $clr-orange !important;
+            font-size: 2rem !important;
+        }
     }
 }
