@@ -1,3 +1,4 @@
+@use "media-breakpoints" as *;
 @use "vars-colors" as *;
 @use "uppercase" as *;
 
@@ -5,6 +6,7 @@
     position: relative; /* No effect but to allow positioning of children */
 
     & video {
+        display: block;
         width: 100%;
     }
     
@@ -15,19 +17,57 @@
         margin: 0 auto;
         left: 0;
         right: 0;
+        font-weight: bold;
+        font-size: 1.8rem;
+        letter-spacing: .01rem;
         text-align: center;
         text-shadow: .05rem .05rem $clr-white;
     }
 
     & .play-arrow {
-        width: 10%;
-        height: 20%;
-        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
         position: absolute;
-        margin: 0 auto;
-        bottom: 40%;
+        bottom: 30%;
         left: 0;
         right: 0;
-        background-color: $clr-orange;
+        text-align: center;
+        color: $clr-orange;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: $breakpoint-small) {
+    .video-panel {
+        p {
+            font-size: 3rem;
+        }
+
+        & .play-arrow {
+            font-size: 100px;
+        }    
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .video-panel {
+        p {
+            font-size: 4rem;
+        }
+
+        & .play-arrow {
+            font-size: 200px;
+        }    
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .video-panel {
+        p {
+            top: 4rem;
+            font-size: 6rem;
+        }
+
+        & .play-arrow {
+            font-size: 300px;
+        }    
     }
 }

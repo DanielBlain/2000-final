@@ -7,6 +7,7 @@
 .news-panel {
     padding: $space-horiz;
     text-align: center;
+    background-color: $clr-white;
     
     & span {
         @include uppercase;
