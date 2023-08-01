@@ -16,7 +16,7 @@
     }
 }
 
-.news-slick {
+.news-swiper {
     a {
         display: block;
         padding: 2.2rem 0;
@@ -28,18 +28,4 @@
 }
 
 @media (min-width: $breakpoint-medium) {
-    .news-slick {
-        position: relative;
-        display: inline;
-        .slick-slider {
-            position: relative;
-            display: block;
-            width: 80%;
-            margin: 2rem auto;
-        }
-        .slick-next:before, .slick-prev:before {
-            color: $clr-orange !important;
-            font-size: 2rem !important;
-        }
-    }
 }
