@@ -33,12 +33,16 @@
         color: $clr-orange;
         font-size: 2rem;
     }
+
+    &:hover .play-arrow {
+        text-shadow: .05rem .05rem $clr-white;
+    }    
 }
 
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 99999;
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -49,13 +53,33 @@
 }
 
 .modal-content {
-    position: relative;
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
     background-color: #fefefe;
-    padding: 20px;
+    padding: 5px;
 
     video {
-        display: inline;
-        max-width: 60%;
+        display: block;
+        max-width: 100%;
+    }
+
+    .close {
+        @include uppercase;
+        padding: .2rem .4rem;
+        position: absolute;
+        top: -.4rem;
+        right: -.2rem;
+        font-size: .4rem;
+        font-weight: 300;
+        background-color: $clr-black;
+        color: $clr-white;
+    }
+
+    .close:hover {
+        background-color: $clr-orange;
     }
 }
 
