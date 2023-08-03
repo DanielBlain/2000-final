@@ -59,6 +59,18 @@
     z-index: 2;
 }
 
+.first-header-wrapper {
+    overflow: hidden; 
+  }
+  .site-navigation {
+    max-height: 6rem; 
+    transition: max-height 0.3s ease-in-out; 
+  }
+  
+  .site-navigation.toggled {
+    max-height: 550px; 
+  }
+     
 .site-navigation.toggled ul {
     display: block;
 }
