@@ -3,7 +3,7 @@
 
 .learn-more {
     margin: 2rem 0 0 0;
-    img {
+    img, picture {
         width: 100%;
         vertical-align: bottom;
         &:last-of-type {
@@ -157,7 +157,7 @@ p {
 @media (min-width: 960px) {
     .all-new {
         width: 35%;
-        height: 20vh;
+        height: 25vh;
         margin-top: 5rem;;
     }
     .all-new-text{

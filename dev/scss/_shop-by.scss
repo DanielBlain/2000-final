@@ -13,6 +13,12 @@
     }
 }
 
+.slick-initialized .slick-slide {
+    display: flex !important;
+    justify-content: center!important;
+    align-items: center!important;
+}
+
 .shop-by-slide {
     margin: 0 auto;
     width: 90%;
@@ -70,7 +76,7 @@
 .shop-by-contents {
     p {
         font-size: 1.25rem;
-        transform: translate(-60%, -50%);
+        transform: translate(-50%, -50%);
     }
     img {
         width: 90%;
