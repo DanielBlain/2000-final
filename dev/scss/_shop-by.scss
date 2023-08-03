@@ -1,17 +1,17 @@
 @use "vars-colors" as *;
+@use "media-breakpoints" as *;
 
 .shop-by {
     background-color: white;
     margin: 0 auto;
-}
-
-h2 {
+    h2 {
     margin: 0;
     padding:1.5rem ;
-    font-size: 2.75rem;
+    font-size: 2rem;
     font-weight: 200;
-    text-align: center;
+    text-transform: uppercase;
     }
+}
 
 .shop-by-slide {
     margin: 0 auto;
@@ -38,13 +38,10 @@ h2 {
     text-align: center;
     text-transform: uppercase;
     margin: 0;
-    }    
-}
-
-.shop-text {
     z-index: 999;
     font-size: 1.5rem;
     color:$clr-white;
+    }    
 }
 
 @media (min-width: 450px) {
@@ -62,10 +59,43 @@ h2 {
         font-size: 2rem !important;
     }
 }
+.shop-by {
+    h2 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-align: center;
+    }
+}
 
 .shop-by-contents {
     p {
-        font-size: 2rem;
+        font-size: 1.25rem;
+        transform: translate(-60%, -50%);
+    }
+    img {
+        width: 90%;
     }
 }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .shop-by {
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+   .shop-by-contents {
+    p {
+        font-size: 2rem;
+    }
+} 
+}
+
+@media (min-width: $breakpoint-large) {
+   .shop-by-contents {
+    p {
+        font-size: 2.25rem;
+    }
+} 
 }

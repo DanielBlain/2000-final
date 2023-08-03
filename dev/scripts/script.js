@@ -6,14 +6,12 @@ $(document).ready(function(){
         slidesToShow: 5,
         slidesToScroll: 5,
         arrows: true,
-​
         responsive: [
             {
               breakpoint: 1315,
               settings: {
                 slidesToShow: 4,
                 slidesToScroll: 4
-                
               }
             },
             {
@@ -21,7 +19,6 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3
-                
               }
             },
             {
