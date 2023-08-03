@@ -65,7 +65,7 @@
 
 .site-navigation a {
     display: flex;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: $clr-white; 
    
@@ -84,6 +84,7 @@
 
 .nav-link{
 	padding: 1rem;
+    text-transform: uppercase;
 }
 
 
@@ -237,12 +238,12 @@
     object-fit: cover;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: #e10f0f !important;
-    fill: rgb(233, 10, 10) !important;
-    stroke: black !important;
-}
+:root {
+    --swiper-navigation-color: #e38a2c;
+    --swiper-pagination-color: #e38a2c;
+    --swiper-pagination-bullet-width: 20px;
+    --swiper-pagination-bullet-size: 20px;
+  }
 
 .best-seller {
     display: flex;
