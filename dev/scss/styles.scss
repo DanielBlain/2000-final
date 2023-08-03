@@ -34,6 +34,12 @@
     width: 12rem;
 } 
 
+:root {
+    --swiper-navigation-color: #e38a2c;
+    --swiper-pagination-color: #e38a2c;
+    --swiper-pagination-bullet-width: 20px;
+    --swiper-pagination-bullet-size: 20px;
+  }
 
 /* header ..................*/
  
@@ -52,7 +58,7 @@
 .site-navigation ul {
     list-style: none;
     margin: 0;
-    padding: 1rem 0;
+    padding: .7rem 0;
     display: none;
     left: 0;
     right: 0;
@@ -65,7 +71,7 @@
 
 .site-navigation a {
     display: flex;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: $clr-white; 
    
@@ -84,6 +90,7 @@
 
 .nav-link{
 	padding: 1rem;
+    text-transform: uppercase;
 }
 
 
@@ -164,7 +171,7 @@
           background-color: $clr-black;
           position: relative;
           padding: .5rem 0;
-          max-width: 95rem;
+          max-width: 100%;
           justify-self: center;
       }
 
@@ -356,7 +363,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 3rem 3rem;
+        margin: 3rem;
     }
 
     .best-seller {
@@ -419,9 +426,6 @@
         width: 100%;
     }
 
-    .best-seller{
-        max-width: 95rem;
-    }
 
     .first-header-wrapper,
     .first-main-wrapper{
@@ -433,12 +437,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 95rem;
         background-color: $clr-white;
     }
 
-    #first-banner{
-        max-width: 95rem;
-    } 
+
 }
 
+.first-section-banner {
+    background-color: white;
+  }
