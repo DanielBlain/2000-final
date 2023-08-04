@@ -125,6 +125,8 @@
 
 @media (min-width: $breakpoint-large) {
     .video-panel {
+        margin: 0 auto;
+        max-width: 1600px;
         p {
             top: 4rem;
             font-size: 6rem;
@@ -133,5 +135,11 @@
         & .play-arrow {
             font-size: 300px;
         }    
+    }
+
+    .modal-content {
+        top: 10%;
+        left: 10%;
+        right: 10%;
     }
 }
