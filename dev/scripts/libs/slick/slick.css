@@ -3,7 +3,8 @@
 {
     position: relative;
 
-    display: block;
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
 
     -webkit-user-select: none;
