@@ -1,11 +1,13 @@
+@use "media-breakpoints" as *;
 @use "vars-colors" as *;
 @use "uppercase" as *;
 
 .video-panel {
     position: relative; /* No effect but to allow positioning of children */
 
-    & video {
-        width: 100%;
+    & img {
+        display: block;
+        max-width: 100%;
     }
     
     & p {
@@ -15,19 +17,121 @@
         margin: 0 auto;
         left: 0;
         right: 0;
+        font-weight: bold;
+        font-size: 1.8rem;
+        letter-spacing: .01rem;
         text-align: center;
         text-shadow: .05rem .05rem $clr-white;
     }
 
     & .play-arrow {
-        width: 10%;
-        height: 20%;
-        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
         position: absolute;
-        margin: 0 auto;
-        bottom: 40%;
+        bottom: 30%;
         left: 0;
         right: 0;
+        text-align: center;
+        color: $clr-orange;
+        font-size: 2rem;
+    }
+
+    &:hover .play-arrow {
+        text-shadow: .05rem .05rem $clr-white;
+    }    
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $clr-black-transparent;
+}
+
+.modal-content {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    background-color: #fefefe;
+    padding: 5px;
+
+    video {
+        display: block;
+        max-width: 100%;
+    }
+
+    .close {
+        @include uppercase;
+        padding: .2rem .4rem;
+        position: absolute;
+        top: -.4rem;
+        right: -.2rem;
+        font-size: .4rem;
+        font-weight: 300;
+        background-color: $clr-black;
+        color: $clr-white;
+    }
+
+    .close:hover {
         background-color: $clr-orange;
+    }
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: $breakpoint-small) {
+    .video-panel {
+        p {
+            font-size: 3rem;
+        }
+
+        & .play-arrow {
+            font-size: 100px;
+        }    
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .video-panel {
+        p {
+            font-size: 4rem;
+        }
+
+        & .play-arrow {
+            font-size: 200px;
+        }    
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .video-panel {
+        p {
+            top: 4rem;
+            font-size: 6rem;
+        }
+
+        & .play-arrow {
+            font-size: 300px;
+        }    
     }
 }

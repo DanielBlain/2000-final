@@ -4,27 +4,22 @@
 @use "vars-spacing" as *;
 @use "capitalize" as *;
 
-body {
-    margin: 0;
-}
-
 footer {
-    padding: calc(2*$space-horiz) $space-horiz;
+    padding: 3rem $space-horiz;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: $clr-gray;
+    background-color: $clr-gray-light;
     border-top: solid 1px $clr-black;
     
     .panel {
-        margin: 0;
         flex: 1 1 auto;
         width: 80%;
 
         a {
             @include capitalize;
             display: block;
-            margin: $space-horiz;
+            padding-bottom: .5rem;
             text-decoration: none;
             color: $clr-black;
         }

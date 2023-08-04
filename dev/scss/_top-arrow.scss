@@ -1,17 +1,12 @@
-// Sass imports
 @use "vars-colors" as *;
 @use "vars-spacing" as *;
 @use "uppercase" as *;
 
 .top-arrow {
     @include uppercase;
+    font-weight: bold;
+    font-size: larger;
+    padding: 3rem $space-horiz 0;
+    background-color: $clr-white;
     color: $clr-orange;
-
-    & span::before {
-        content: '^';//'\f061';
-        font-family: 'Font Awesome 5 free';
-        font-weight: 900;
-        position: relative;
-        left: $space-horiz;
-    }
 }
