@@ -13,11 +13,8 @@
     }
 }
 
-.fa-angle-left:before {
-    font-size: 3rem;
-    color: $clr-orange;
-}
-.fa-angle-right:before {
+.fa-angle-left:before, 
+.fa-angle-right:before{
     font-size: 3rem;
     color: $clr-orange;
 }
