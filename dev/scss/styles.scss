@@ -54,7 +54,18 @@
     background-color: $clr-black;
   }
   
-
+  .first-header-wrapper {
+    overflow: hidden; 
+  }
+  .site-navigation {
+    max-height: 6rem; 
+    transition: max-height 0.3s ease-in-out; 
+  }
+  
+  .site-navigation.toggled {
+    max-height: 550px; 
+  }
+      
 .site-navigation ul {
     list-style: none;
     margin: 0;
@@ -63,6 +74,7 @@
     left: 0;
     right: 0;
     z-index: 2;
+   
 }
 
 .site-navigation.toggled ul {
@@ -85,7 +97,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    
 }
 
 .nav-link{

@@ -42,7 +42,7 @@
                     <img id="logo-Audio" src="./images/logo-audioengine.png" alt="Audio Logo">
                 </a>
 
-                <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
+                <button class="menu-toggle" id="menu-toggle-button" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
                     
                     <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
                         <path
@@ -56,7 +56,7 @@
                             d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
                     </svg>
                 </button>
-
+                
                 <ul class="nav-menu" id="header-menu">
                     <li class="nav-item ">
                         <a class="nav-link" class="swiper-slide" href="#">speakers</a>
@@ -246,15 +246,11 @@
                     <div class="learn-more">
                         <div class="learn-more-box">
 
-                            <!-- <picture>
-                            <source media="(max-width:500px)" srcset="images/bg-all-new-section-phone-square.jpg">
-                            <source media="(min-width:750px)" srcset="images/bg-all-new-section.jpg">
-                            <img src="images/bg-all-new-section.jpg" alt="A white speakers" style="width:auto;">
-                            </picture> -->
-
-                            <img alt="A white speaker" src="images/bg-all-new-section.jpg"
-                                srcset="images/bg-all-new-section.jpg 750w, images/bg-all-new-section-phone-square.jpg 500w"
-                                sizes="(max-width: 960px) calc(100vw - 60px), 900px">
+                            <picture>
+                            <source media="(max-width:500px)" srcset="images/bg-all-new-section-phone-square.jpg"/>
+                            <source media="(min-width:750px)" srcset="images/bg-all-new-section.jpg"/>
+                            <img src="images/bg-all-new-section.jpg" alt="A white speakers">
+                            </picture>
 
                             <div class="all-new">
                                 <div class="all-new-text">
@@ -262,41 +258,33 @@
                                     <p>The A5+ Wireless Speakers</p>
                                     <button>Learn More</button>
                                 </div>
-                            </div>
+                        </div>
 
-                            <div class="learn-more-box">
+                        <div class="learn-more-box">
 
-                                <!-- <picture>
-                                <source media="(max-width:500px)" srcset="images/bg-feeling-lucky-section-phone-square.jpg">
-                                <source media="(min-width:750px)" srcset="images/bg-feeling-lucky-section.jpg">
-                                <img src="images/bg-feeling-lucky-section.jpg" alt="A wodden speaker" style="width:auto;">
-                                </picture> -->
+                            <picture>
+                            <source media="(max-width:500px)" srcset="images/bg-feeling-lucky-section-phone-square.jpg">
+                            <source media="(min-width:750px)" srcset="images/bg-feeling-lucky-section.jpg">
+                            <img src="images/bg-feeling-lucky-section.jpg" alt="A wodden speaker">
+                            </picture>
 
-                                <img alt="A wodden speaker" src="images/bg-feeling-lucky-section-phone-square.jpg"
-                                    srcset="images/bg-feeling-lucky-section.jpg 750w, images/bg-feeling-lucky-section-phone-square.jpg 500w"
-                                    sizes="(max-width: 960px) calc(100vw - 60px), 900px">
-
-                                <div class="all-new">
-                                    <div class="all-new-text">
-                                        <p>Feeling Lucky</p>
-                                        <p>The A5+ Wireless Speakers</p>
-                                        <button>Learn more</button>
-                                    </div>
+                            <div class="all-new">
+                                <div class="all-new-text">
+                                    <p>Feeling Lucky</p>
+                                    <p>The A5+ Wireless Speakers</p>
+                                    <button>Learn more</button>
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="our-story-box">
-                            <!-- <picture>
+
+                            <picture>
                             <source media="(max-width:500px)" srcset="images/bg-our-story-section-phone-square.jpg">
                             <source media="(max-width:750px)" srcset="images/bg-our-story-section-tablet.jpg">
                             <source media="(min-width:1200px)" srcset="images/bg-our-story-section.jpg">
-                            <img src="images/bg-our-story-section.jpg" alt="A starry sky" style="width:auto;">
-                            </picture> -->
-
-                            <img alt="A starry sky" src="images/bg-our-story-section.jpg"
-                                srcset="images/bg-our-story-section.jpg 1200w, images/bg-our-story-section-tablet.jpg 750w, images/bg-our-story-section-phone-square.jpg 500w"
-                                sizes="(max-width: 960px) calc(100vw - 60px), 900px">
+                            <img src="images/bg-our-story-section.jpg" alt="A starry sky">
+                            </picture>
 
                             <div class="our-story">
                                 <p>Our story</p>
@@ -306,7 +294,8 @@
                                     to listen to music every day.</p>
                                 <button>Learn more</button>
                             </div>
-                        </div>        
+                        </div>
+                        
                     </div>
                 </section>
             </div>
@@ -427,7 +416,7 @@
     <script src="scripts/script.min.js?cachebuster=1"></script>
     <!-- *** IMPORTANT *** DO NOT ADD ADDITIONAL SCRIPT LINKS HERE...If you want to add additional scripts simply save the script files to the "dev/scripts" directory (for your custom scripts) and the 'dev/scripts/libs' directory for any jQuery plugins or other JavaScript libraries and Gulp will concatenate and minify them into the "script.min.js" file above. See the project instructions for details -->	
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
-    
+
 </body>
 
 </body>
