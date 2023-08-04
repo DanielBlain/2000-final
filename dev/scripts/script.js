@@ -1,11 +1,14 @@
 'use strict';
 // Write your JavaScript here...
+
 $(document).ready(function(){
     $('.shop-by-slide').slick({
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 5,
         arrows: true,
+        nextArrow: '<i class="fa-solid fa-angle-right"></i>',
+        prevArrow: '<i class="fa-solid fa-angle-left"></i>',
         responsive: [
             {
               breakpoint: 1315,
