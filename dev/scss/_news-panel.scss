@@ -5,19 +5,55 @@
 @use "uppercase" as *;
 
 .news-panel {
-    padding: $space-horiz;
+    padding: 3rem $space-horiz 1rem;
     text-align: center;
     
     & span {
         @include uppercase;
         font-family: 'Source Sans 3', sans-serif;
+        font-size: xx-large;
     }
 }
 
-.news-slick {
-    margin: 0 auto;
-    
+.news-contents {
+    position: relative;
+    margin: 0 2rem;
     img {
-        width: 125px;
+        display: block;
     }
 }
+
+/*
+
+.shop-by-slide {
+    margin: 0 auto;
+    // width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.shop-by-contents {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    img {
+    border-radius: 50%;
+    width: 100%;
+    filter: brightness(0.5);
+    }
+    p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    z-index: 999;
+    font-size: 1.5rem;
+    color:$clr-white;
+    }    
+}
+
+*/
