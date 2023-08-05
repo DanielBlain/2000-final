@@ -2,16 +2,35 @@
 @use "vars-colors" as *;
 @use "vars-spacing" as *;
 @use "uppercase" as *;
+@use "media-breakpoints" as *;
 
 .top-arrow {
     @include uppercase;
+    display: flex;
+    justify-content: left;
     color: $clr-orange;
+    padding: 2rem 2rem 0;
+    font-weight: 500;
+    font-size: 1rem;
+    list-style: none;
 
-    & span::before {
-        content: '^';//'\f061';
-        font-family: 'Font Awesome 5 free';
-        font-weight: 900;
-        position: relative;
-        left: $space-horiz;
+}
+
+.top-arrow div:hover{
+    cursor: pointer;
+}
+
+.fa-arrow-up::before {
+    content: "\f062";
+    color: $clr-orange;
+  }
+
+  .contect-social-style{
+    background-color: white;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    .top-arrow {
+        padding: 2rem 7rem 0 7rem;
     }
 }

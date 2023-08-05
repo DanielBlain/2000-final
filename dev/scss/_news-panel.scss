@@ -7,9 +7,12 @@
 .news-panel {
     padding: $space-horiz;
     text-align: center;
-    
-    & span {
+    background-color: $clr-white;
+
+    h2{
         @include uppercase;
+        font-weight: 200;
+        font-size: 2rem;
         font-family: 'Source Sans 3', sans-serif;
     }
 }

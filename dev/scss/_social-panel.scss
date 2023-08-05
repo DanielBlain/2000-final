@@ -9,13 +9,26 @@
     flex-direction: row;
     flex-wrap:  wrap;
     justify-content: space-between;
-    padding: $space-horiz;
+    padding: 2rem;
+    align-items: baseline;
+    
+    
 
-    span {
+    h3 {
         margin: $space-horiz;
+        font-weight: 500;
+        padding: .5rem;
     }
 
     .email {
         @include uppercase;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .social-panel {
+        padding: 2rem 7rem;
     }
 }

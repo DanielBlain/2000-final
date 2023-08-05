@@ -4,13 +4,11 @@
 @use "vars-spacing" as *;
 @use "capitalize" as *;
 
-body {
-    margin: 0;
-}
 
 footer {
-    padding: calc(2*$space-horiz) $space-horiz;
+    padding: 2rem 1.5rem;
     display: flex;
+    font-weight: 500;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: $clr-gray;
@@ -26,19 +24,39 @@ footer {
             display: block;
             margin: $space-horiz;
             text-decoration: none;
-            color: $clr-black;
+            margin-top: 0;
+            color: $clr-dark-gray;
         }
     }
 }
 
 @media (min-width: $breakpoint-tiny) {
+    footer{
+        padding: 2rem 3rem;
+    }
+    
     footer .panel {
         width: 40%;
+        margin: 0;
     }
+    
 }
 
 @media (min-width: $breakpoint-small) {
     footer .panel {
         width: 22.5%;
+        margin: 0;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    
+    footer {
+        padding: 3rem 7rem;
+    }
+    
+    footer .panel {
+        width: 22.5%;
+        margin: 0;
     }
 }
