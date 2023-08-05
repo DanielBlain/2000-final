@@ -9,13 +9,46 @@
     flex-direction: row;
     flex-wrap:  wrap;
     justify-content: space-between;
-    padding: $space-horiz;
+    padding: 2rem $space-horiz;
+    background-color: $clr-white;
 
-    span {
-        margin: $space-horiz;
+    & > * {
+        width: 90%;
+    }
+
+    .social-icon {
+        display: inline-flex;
+        margin-right: 5px;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        background-color: $clr-black;
+        color: $clr-white;
+        justify-content: center;
+        align-items: center;
     }
 
     .email {
         @include uppercase;
+        margin-top: 1.4rem;
+
+        span {
+            position: relative;
+            bottom: .7rem;
+            font-size: larger;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-small) {
+    .social-panel {
+        & > * {
+            width: auto;
+        }
+
+        .email {
+            margin-top: 0;
+        }
     }
 }
