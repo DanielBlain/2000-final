@@ -27,6 +27,10 @@
     }
 }
 
+.social-panel h3:hover {
+    color: $clr-orange;
+}
+
 @media (min-width: $breakpoint-large) {
     .social-panel {
         padding: 2rem 7rem;
