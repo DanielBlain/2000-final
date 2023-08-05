@@ -34,8 +34,18 @@
     width: 12rem;
 } 
 
+:root {
+    --swiper-navigation-color: #e38a2c;
+    --swiper-pagination-color: #e38a2c;
+    --swiper-pagination-bullet-width: 20px;
+    --swiper-pagination-bullet-size: 20px;
+  }
 
 /* header ..................*/
+
+.main-title{
+ display: none;
+}
  
 .navbar-nav-ml-auto {
   list-style-type: none; 
@@ -48,15 +58,27 @@
     background-color: $clr-black;
   }
   
-
+  .first-header-wrapper {
+    overflow: hidden; 
+  }
+  .site-navigation {
+    max-height: 6rem; 
+    transition: max-height 0.3s ease-in-out; 
+  }
+  
+  .site-navigation.toggled {
+    max-height: 550px; 
+  }
+      
 .site-navigation ul {
     list-style: none;
     margin: 0;
-    padding: 1rem 0;
+    padding: .7rem 0;
     display: none;
     left: 0;
     right: 0;
     z-index: 2;
+   
 }
 
 .first-header-wrapper {
@@ -91,7 +113,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    
 }
 
 .nav-link{
@@ -177,7 +198,7 @@
           background-color: $clr-black;
           position: relative;
           padding: .5rem 0;
-          max-width: 95rem;
+          max-width: 100%;
           justify-self: center;
       }
 
@@ -265,6 +286,7 @@
     background-color: $clr-white;
     padding: 2rem;
     text-align: left;
+    width: 100%;
     
 
     & .best-seller-img img{
@@ -279,8 +301,9 @@
         @include important-text;
     }
 
-    & h1 {
-        font-size: 2.5rem;
+    & h2 {
+        font-size: 2rem;
+        font-weight: 200;
     }
 }
 
@@ -290,6 +313,7 @@
     grid-template-columns: 1fr 0 ;
     text-align: left;
     gap: 2rem;
+    margin-right: 4rem;
  
 
     & p {
@@ -369,7 +393,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 3rem 3rem;
+        margin: 3rem;
     }
 
     .best-seller {
@@ -378,7 +402,7 @@
         flex-direction: column;
         justify-content: center;
         background-color: $clr-white;
-        padding: 1rem;
+        padding: 0;
         text-align: center;
         
     
@@ -426,15 +450,13 @@
 
     .best-seller p {
         font-size: 1.5rem;
+        padding: 0;
     }
 
     .first-header{
         width: 100%;
     }
 
-    .best-seller{
-        max-width: 95rem;
-    }
 
     .first-header-wrapper,
     .first-main-wrapper{
@@ -446,14 +468,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 95rem;
         background-color: $clr-white;
     }
 
-    #first-banner{
-        max-width: 95rem;
-    }
-
-    
+   
 }
 
+.first-section-banner {
+    background-color: white;
+  }
+
+
+ 

@@ -1,16 +1,30 @@
-@use "vars-colors";
+@use "vars-colors" as *;
+@use "media-breakpoints" as *;
+
+.shop-by {
+    background-color: white;
+    margin: 0 auto;
+    h2 {
+    margin: 0;
+    padding:1.5rem ;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    }
+}
+
+.fa-angle-left:before, 
+.fa-angle-right:before{
+    font-size: 3rem;
+    color: $clr-orange;
+}
 
 .shop-by-slide {
     margin: 0 auto;
-    width: 90%;
+    // width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    h2 {
-    margin: 2rem;
-    font-size: 2rem;
-    font-weight: 400;
-    }
 }
 
 .shop-by-contents {
@@ -20,20 +34,62 @@
     img {
     border-radius: 50%;
     width: 100%;
+    filter: brightness(0.5);
+    }
+    p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    z-index: 999;
+    font-size: 1.5rem;
+    color:$clr-white;
+    }    
+}
+
+.slick-slider {
+    display: flex!important;
+    align-items: center!important;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+@media (min-width: 450px) {
+.shop-by {
+    h2 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-align: center;
     }
 }
 
-.shop-text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(128, 128, 128, 0.5);
-    border-radius: 50%;
+.shop-by-contents {
+    p {
+        font-size: 1.25rem;
+        transform: translate(-57%, -50%);
+    }
+    img {
+        width: 90%;
+    }
+}
+}
+
+@media (min-width: $breakpoint-medium) {
+
+   .shop-by-contents {
     p {
         font-size: 2rem;
-        color: white;
-        text-align: center;
     }
+} 
+}
+
+@media (min-width: $breakpoint-large) {
+   .shop-by-contents {
+    p {
+        font-size: 2.25rem;
+    }
+} 
 }
