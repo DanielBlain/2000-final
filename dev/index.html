@@ -331,12 +331,10 @@
                 </div>
             </div>
 
-            <div class="video-panel">
-                <video muted loop playsinline poster="images/bg-this-is-audio-engine-section.jpg">
-                    <source src="media/this-is-audioengine.mp4" type="video/mp4">
-                </video>
+            <div class="video-panel" onclick="openVideoModal();" class="hover-shadow">
+                <img src="images/bg-this-is-audio-engine-section.jpg">
                 <p>this is audio engine</p>
-                <div class="play-arrow"></div>
+                <i class="play-arrow fa-solid fa-play"></i>
             </div>
 
             <div class="top-arrow">
@@ -397,6 +395,17 @@
                 <a href="#">news</a>    
             </div>
         </footer>
+    </div>
+
+
+    <!-- The Video Modal/Lightbox -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <video muted playsinline controls autoplay>
+                <source src="media/this-is-audioengine.mp4" type="video/mp4">
+            </video>
+            <span class="close" onclick="closeVideoModal()">close</span>
+        </div>
     </div>
 
     
